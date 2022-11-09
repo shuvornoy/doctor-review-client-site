@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.jpg';
+import logo from '../../../assets/logo.png';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
@@ -21,8 +21,7 @@ const Header = () => {
             user?.email ?
                 <>
                     
-                    <li className='font-semibold'><Link to='/addServices'>add services</Link></li>
-                    <li className='font-semibold'><Link to='/review'>my review</Link></li>
+                    
                    
                    
                 </>
@@ -44,7 +43,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to="/" className=" normal-case ">
-                    <img className='logo-img' src={logo} alt="" />
+                    <img src={logo} alt="" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -57,6 +56,8 @@ const Header = () => {
                 {
             user?.email ?
                 <>   
+                        <Link to='/addServices'><button className='btn btn-outline '>add services</button></Link>
+                        <Link to='/review'><button className='btn btn-outline mx-3'>my review</button></Link>
                         <button className='btn btn-outline ' onClick={ handleLogOut }>Sign Out</button>
    
                 </>
