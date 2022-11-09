@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Details = () => {
+   
     const { _id, title, price,description, img} = useLoaderData();
     const { user } = useContext(AuthContext);
 
@@ -41,8 +44,10 @@ const Details = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.acknowledged){
-                    alert('Review placed successfully')
+                if(data.acknowledged)
+                {
+                 
+                    toast.success('Successfully toasted!')
                     form.reset();
                     
                 }
@@ -70,6 +75,10 @@ const Details = () => {
                 <textarea name="message" className="textarea textarea-bordered h-24 w-full" placeholder="Your Message" required></textarea>
 
                 <input className='btn' type="submit" value="submit" />
+                <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
             </form>
         </div>
     );

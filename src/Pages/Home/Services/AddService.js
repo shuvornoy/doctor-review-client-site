@@ -1,4 +1,5 @@
 import React from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddService = () => {
     const handlePlaceServices = event =>{
@@ -28,7 +29,7 @@ const AddService = () => {
         .then(data => {
             console.log(data)
                 if(data.acknowledged){
-                    alert('Review placed successfully')
+                    toast.success('Successfully added service card!')
                     form.reset();
                     
                 }
@@ -60,7 +61,11 @@ const AddService = () => {
            </label>
 
             <input className='btn' type="submit" value="submit"/>
-         </form>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
+            </form>
         </div>
     );
 };
