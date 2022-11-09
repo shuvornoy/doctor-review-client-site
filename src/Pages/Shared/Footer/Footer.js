@@ -1,35 +1,120 @@
 import React from 'react';
-import logo from '../../../assets/logo.png';
-import './footer.css'
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer className="footer p-32 bg-black text-white">
-            <div>
-                <img className='logo-img' src={logo} alt="" />
-                <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+<div className="footer-start" style={{ marginTop: "75px" }}>
+      <footer>
+        <div className="content">
+          <div className="top">
+            <div className="logo-details">
+              <i className="fas fa-plane-departure"></i>
+              <span className="logo_name"> Dream Tour</span>
             </div>
-            <div>
-                <span className="footer-title">Services</span>
-                <a href="/"className="link link-hover">Branding</a>
-                <a href="/"className="link link-hover">Design</a>
-                <a href="/"className="link link-hover">Marketing</a>
-                <a href="/"className="link link-hover">Advertisement</a>
+            <div className="media-icons">
+              <a href="/">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="/">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="/">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="/">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="/">
+                <i className="fab fa-youtube"></i>
+              </a>
             </div>
-            <div>
-                <span className="footer-title">Company</span>
-                <a href="/"className="link link-hover">About us</a>
-                <a href="/"className="link link-hover">Contact</a>
-                <a href="/"className="link link-hover">Jobs</a>
-                <a href="/"className="link link-hover">Press kit</a>
-            </div>
-            <div>
-                <span className="footer-title">Legal</span>
-                <a href="/"className="link link-hover">Terms of use</a>
-                <a href="/"className="link link-hover">Privacy policy</a>
-                <a href="/"className="link link-hover">Cookie policy</a>
-            </div>
-        </footer>
+          </div>
+          <div className="link-boxes">
+            <ul className="box">
+              <li className="link_name">Company</li>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/">Contact us</a>
+              </li>
+              <li>
+                <a href="/">About us</a>
+              </li>
+              <li>
+                <a href="/">Get started</a>
+              </li>
+            </ul>
+            <ul className="box">
+              <li className="link_name">Services</li>
+              <li>
+                <a href="/">Five star hotels</a>
+              </li>
+              <li>
+                <a href="/">Special boat package</a>
+              </li>
+              <li>
+                <a href="/">Seasonal and holiday deals</a>
+              </li>
+              <li>
+                <a href="/">Healthy food</a>
+              </li>
+            </ul>
+            <ul className="box">
+              <li className="link_name">Account</li>
+              <li>
+                <a href="/">Profile</a>
+              </li>
+              <li>
+                <a href="/">My account</a>
+              </li>
+              <li>
+                <a href="/">Prefrences</a>
+              </li>
+              <li>
+                <a href="/">Purchase</a>
+              </li>
+            </ul>
+            <ul className="box">
+              <li className="link_name">Other Services</li>
+              <li>
+                <a href="/">Investor relations</a>
+              </li>
+              <li>
+                <a href="/">Trip.com rewards</a>
+              </li>
+              <li>
+                <a href="/">Affiliate program</a>
+              </li>
+              <li>
+                <a href="/">Become a tours vendor</a>
+              </li>
+            </ul>
+            <ul className="box input-box">
+              <li className="link_name">Subscribe</li>
+              <li>
+                <input type="text" placeholder="Enter your email" />
+              </li>
+              <li>
+                <input type="button" value="Subscribe" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="bottom-details">
+          <div className="bottom_text">
+            <span className="copyright_text">
+              Copyright © 2021 <a href="/">Giethoorn Tour.</a>All rights
+              reserved
+            </span>
+            <span className="policy_terms">
+              <a href="/">Privacy policy</a>
+              <a href="/">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
     );
 };
 
