@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="top">
             <div className="logo-details">
               <i className="fas fa-plane-departure"></i>
-              <span className="logo_name"> Dream Tour</span>
+              <span className="logo_name"> Doctor Review</span>
             </div>
             <div className="media-icons">
               <a href="/">

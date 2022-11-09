@@ -12,14 +12,12 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <HomeServices />
-           <div className="text-center py-10">
-           <button className="btn btn-outline px-10">  <a href="/services">SEE ALL</a> </button>
            <Info />
+           <ServiceHero />
            <MakeAppointment />
            <Contact />
-           <ServiceHero />
            </div>
-        </div>
+       
     );
 };
 
