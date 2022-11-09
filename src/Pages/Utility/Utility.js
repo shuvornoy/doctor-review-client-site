@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Utiliti = (user) => {
 
@@ -7,7 +7,7 @@ const Utiliti = (user) => {
                 email: user.email
             }
             // get jwt token
-            fetch('https://modul-66-genius-car-server.vercel.app/jwt', {
+            fetch('http://localhost:5000/jwt', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

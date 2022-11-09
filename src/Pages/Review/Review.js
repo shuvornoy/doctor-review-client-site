@@ -49,7 +49,7 @@ const Review = () => {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                authorization: `Bearer ${localStorage.getItem('review-token')}`
             },
             body: JSON.stringify({ status: 'Approved' })
         })
