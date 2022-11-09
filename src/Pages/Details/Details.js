@@ -54,14 +54,14 @@ const Details = () => {
 
     return (
         <div>
-            <h2 className="text-4xl">services : {title}</h2>
+            <h2 className="text-4xl">Services Name: {title}</h2>
                 <img src={img} alt="" />
                 <p>{description}</p>
                 <h4 className="text-3xl">Price: {price}</h4>
-                <button className=' btn btn-outline'>Details</button>
-            <form onSubmit={handlePlaceReview}>
-                  <h2 className="text-4xl">You are about to order: {title}</h2>
-                <h4 className="text-3xl">Price: {price}</h4>
+               
+            <form onSubmit={handlePlaceReview} className="mt-10">
+                  <h2 className="text-4xl">Please your review</h2>
+                
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name="Name" type="text" placeholder="Name" className="input input-ghost w-full  input-bordered" />
                     <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />

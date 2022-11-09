@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ReviewRow.css'
 
 const ReviewRow = ({ review, handleDelete, handleStatusUpdate, handleUpdate}) => {
-    const { _id, serviceName, phone, customer, price, service, status } = review;
+    const { _id, serviceName, phone, customer, price, service, status, images } = review;
     const [reviewService, setReviewService] = useState({})
 
     useEffect(() => {
@@ -26,10 +27,11 @@ const ReviewRow = ({ review, handleDelete, handleStatusUpdate, handleUpdate}) =>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="rounded w-24 h-24">
-                            {
+                        <div className="rounded w-20 h-20">
+                            <img src={images} alt="" />
+                            {/* {
                                 reviewService?.img && 
-                                <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />}
+                                <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />} */}
                         </div>
                     </div>
                     <div>
