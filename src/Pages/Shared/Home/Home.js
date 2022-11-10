@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ServiceHero from '../../Shared/About/About';
-import Contact from '../../Shared/Contact/Contact';
 import Info from '../../Shared/Info/Info';
-import MakeAppointment from '../../Shared/MarkAppoment/MarkAppoment';
+import ServiceHero from '../About/About';
 import Banner from '../Banner/Banner';
+import Contact from '../Contact/Contact';
+import MakeAppointment from '../MarkAppoment/MarkAppoment';
 import ServiceCard from '../Services/ServiceCard';
-import { Helmet } from 'react-helmet';
+
+
 
 const Home = () => {
-
     const [services, setServices] = useState([]);
     
     useEffect( () =>{
@@ -17,13 +16,8 @@ const Home = () => {
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);
-
     return (
         <div>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Doctor review</title>
-            </Helmet>
             <Banner></Banner>
             <div>
             <div className='text-center mb-4'>
@@ -36,18 +30,18 @@ const Home = () => {
                         service={service}
                     ></ServiceCard>)
                 }
+                
             </div>
+            <div className="text-center py-10">
+           <button className="btn btn-outline px-10">  <a href="/services">SEE ALL</a> </button>
+           </div>
         </div>
-           <div className="text-center py-10">
-            <Link to='services'>
-           <button className="btn btn-outline px-10">SEE ALL</button>
-           </Link>
-        </div>
-        <Info />
-        <MakeAppointment />
-        <ServiceHero />
-        <Contact />
-        </div>
+           <Info />
+           <ServiceHero />
+           <MakeAppointment />
+           <Contact />
+           </div>
+       
     );
 };
 

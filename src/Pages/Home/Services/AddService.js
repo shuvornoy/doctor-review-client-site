@@ -1,6 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import toast, { Toaster } from 'react-hot-toast';
-import {Helmet} from "react-helmet";
 
 const AddService = () => {
     const handlePlaceServices = event =>{
@@ -18,7 +18,7 @@ const AddService = () => {
             description,
             name
         }
-        fetch('http://localhost:5000/services',{
+        fetch('https://modul-67-assignment-server-sit.vercel.app/services',{
             method : 'POST',
             headers : {
                 'content-type': 'application/json'
@@ -30,7 +30,8 @@ const AddService = () => {
         .then(data => {
             console.log(data)
                 if(data.acknowledged){
-                    toast.success('Successfully added service card!')
+                    toast.success('Review placed successfully')
+                  
                     form.reset();
                     
                 }
@@ -40,40 +41,31 @@ const AddService = () => {
 
     }
     return (
-      
         <div>
-             <Helmet>
-              <meta charSet="utf-8" />
-              <title>addServices</title>
-        </Helmet>
-         <form onSubmit={handlePlaceServices} >
-         <div className='grid grid-cols-1 lg:grid-cols-1 gap-10'>
-         <label>
-                 Name :<input type="text" name='name' placeholder="Enter your name" className="input w-full input-bordered max-w-xs" />
-            </label>
-            <label>
-                Services Name :<input name='title' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-            </label>
-            <label>
-                Photo :<input type="text" name='img' placeholder="services img URL" className="input input-bordered w-full max-w-xs" />
-            </label>
-            <label>
-                Price :<input type="text" name='price' placeholder="Type here" className="input w-full input-bordered max-w-xs" />
-            </label>
-         </div>
-           
-           <label>
-                <textarea name="description" className="textarea textarea-bordered h-24 w-full" placeholder="description" required></textarea>
-           </label>
-
-            <input className='btn' type="submit" value="submit"/>
-            <Toaster
-                position="top-center"
-                reverseOrder={false}
-            />
-            </form>
-        </div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>addServices</title>
+            </Helmet>
+         <form className='flex justify-center mt-10' onSubmit={handlePlaceServices} >
+         <div className='grid grid-cols-1 gap-4 w-1/2'>
+         <h3 className='text-2xl font-bold'>Add Services</h3>
+         <div className='grid grid-cols-2 gap-4'>
+         <input type="text" name='name' placeholder="Enter your name" className="input w-full input-bordered max-w-xs" />
+          
+          <input name='title' type="text" placeholder="Service name" className="input input-bordered w-full max-w-xs" />
+          <input type="text" name='img' placeholder="Services photo URL" className="input input-bordered w-full max-w-xs" />
         
+       <input type="text" name='price' placeholder="Price" className="input w-full input-bordered max-w-xs" />
+         </div>
+         <textarea name="description" className="textarea textarea-bordered h-24 w-full" placeholder="description" required></textarea>
+         <input className='btn btn-outline my-5 px-5 w-20' type="submit" value="submit" />
+         <Toaster
+        position="top-center"
+        reverseOrder={false}
+        />
+         </div>  
+         </form>
+        </div>
     );
 };
 

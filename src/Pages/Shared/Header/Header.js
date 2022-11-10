@@ -25,7 +25,7 @@ const Header = () => {
                 :
                 <Link to='/login'></Link>
         }
-         <li className='font-semibold'><Link to='/'>blog</Link></li>
+         <li className='font-semibold'><Link to='/blog'>blog</Link></li>
     </>
 
     return (

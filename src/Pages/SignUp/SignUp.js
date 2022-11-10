@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -23,10 +24,10 @@ const SignUp = () => {
 
     return (
         <div className='flex justify-center'>
-             <Helmet>
-              <meta charSet="utf-8" />
-              <title>signup</title>
-        </Helmet>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>signUp</title>
+            </Helmet>
         <div className="sm:w-1/2 my-20">
           <div className="md:grid-cols-1 card flex-shrink-0 shadow-2xl bg-base-100 py-10">
                     <h1 className="text-5xl text-center font-bold">Sign Up</h1>
@@ -62,3 +63,14 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+
+
+
+
+
+
+
+
+

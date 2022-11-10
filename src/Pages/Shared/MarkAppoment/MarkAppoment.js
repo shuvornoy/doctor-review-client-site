@@ -1,12 +1,11 @@
 import React from 'react';
 import doctor from '../../../assets/icons/i/doctor.png';
-import appointment from '../../../assets/icons/i/appointment.png';
-import MainButton from './../About/AboutBtn';
+
 
 const MakeAppointment = () => {
     return (
         <section className=' my-28 flex justify-center items-center' style={{
-            background: `url(${appointment})`
+            backgroundColor: 'rgb(148 163 184)'
         }}>
             <div className='flex-1 hidden lg:block'>
                 <img className='mt-[-130px]' src={doctor} alt="" />
@@ -17,7 +16,7 @@ const MakeAppointment = () => {
                 </h3>
                 <h2 className="text-3xl mb-5">Make an Appointment Today</h2>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
-                <MainButton>Get Started</MainButton>
+                <button className="btn btn-active btn-accent">Appointment</button>
 
             </div>
         </section>

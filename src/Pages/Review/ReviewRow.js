@@ -1,56 +1,53 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ReviewRow.css'
+import { Toaster } from 'react-hot-toast';
 
-const ReviewRow = ({ review, handleDelete, handleStatusUpdate, handleUpdate}) => {
-    const { _id, serviceName, phone, customer, price, service, status, images } = review;
+const ReviewRow = ({ review, handleDelete, handleStatusUpdate }) => {
+    const { _id, serviceName,   service,   message, } = review;
     const [reviewService, setReviewService] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
+        fetch(`https://modul-67-assignment-server-sit.vercel.app/services/${service}`)
             .then(res => res.json())
             .then(data => setReviewService(data));
     }, [service])
 
-    
 
     return (
         <tr>
-            <th>
-                <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
-                </label>
-                <label>
-                    <Link to={`/update/:${review._id}`}><button onClick={() => handleUpdate(_id)} className='btn btn-ghost'>Update</button></Link>
-                </label>
-            </th>
+           
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="rounded w-20 h-20">
-                            <img src={images} alt="" />
-                            {/* {
-                                reviewService?.img && 
-                                <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />} */}
+                        <div  className="w-24 h-24">
+                        { reviewService?.img && 
+                        <img src={reviewService.img} alt="img" />}
                         </div>
-                    </div>
-                    <div>
-                        <div className="font-bold">{customer}</div>
-                        <div className="text-sm opacity-50">{phone}</div>
                     </div>
                 </div>
             </td>
-            <td>
-                {serviceName}
-                <br />
-                <span className="badge badge-ghost badge-sm">${price}</span>
+            <td><div className="font-bold"> {serviceName}</div></td>
+            <td className='bg-slate-600 '>
+                <div className='table-data '>{message}</div>
             </td>
-            <td>Purple</td>
-            <th>
+            {/* <th>
                 <button 
                 onClick={() => handleStatusUpdate(_id)}
                 className="btn btn-ghost btn-xs">{status ? status : 'pending'}</button>
+            </th> */}
+            <th className='flex justify-end'>
+               <Link to={`/update/${review._id}`}>
+               <button className='btn btn-outline btn-success mr-2'>Update</button>
+               </Link>
+                <label>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-outline btn-error'>Delete </button>
+                    <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                    />
+                </label>
             </th>
+           
         </tr>
     );
 };

@@ -1,8 +1,11 @@
+
+
+
 import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
-import Utiliti from '../../Utility/Utility';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Utiliti from '../../Utlity/Utlity';
 
 
 
@@ -37,3 +40,12 @@ const Socal = () => {
 };
 
 export default Socal;
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@ import MainButton from './AboutBtn';
 
 const ServiceHero = () => {
     return (
-        <div className="hero mb-10">
+        <div className="hero mb-10 bg-slate-400">
             <div className="hero-content flex-col lg:flex-row">
                 <img width={458} height={576} src={treatment} alt='...' />
                 <div className='lg:ml-7'>

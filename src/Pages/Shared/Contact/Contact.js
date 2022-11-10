@@ -5,7 +5,7 @@ import MainButton from './../About/AboutBtn';
 
 const Contact = () => {
     return (
-        <section className='my-28 py-16 text-center' style={{ backgroundImage: `url(${appointment})` }}>
+        <section className='my-28 py-16 text-center' style={{ backgroundColor: 'rgb(148 163 184)' }}>
             <h2 className="text-xl text-secondary font-bold mb-2">
                 Contact Us
             </h2>
@@ -25,7 +25,7 @@ const Contact = () => {
                 <div >
                     <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Message"></textarea>
                 </div>
-                <MainButton>Submit</MainButton>
+                <button className="btn btn-outline btn-warning mt-3">Contact</button>
             </form>
 
 

@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
+import './Review.css'
 import { Helmet } from 'react-helmet';
+import toast from 'react-hot-toast';
+
 
 
 const Review = () => {
@@ -12,7 +15,7 @@ const Review = () => {
         if(!user?.email){
             return;
         }
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+        fetch(`https://modul-67-assignment-server-sit.vercel.app/reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('review-token')}`
             }
@@ -31,7 +34,7 @@ const Review = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this Review');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://modul-67-assignment-server-sit.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('review-token')}`
@@ -40,7 +43,7 @@ const Review = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                        toast.success('Delete Successfully')
                         const remaining = reviews.filter(odr => odr._id !== id);
                         setReviews(remaining);
                     }
@@ -48,59 +51,32 @@ const Review = () => {
         }
     }
 
-    const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/review/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('review-token')}`
-            },
-            body: JSON.stringify({ status: 'Approved' })
-        })
-            .then(res => res.json())
-            .then(data => {
-               // console.log(data);
-                if (data.modifiedCount > 0) {
-                    const remaining = reviews.filter(odr => odr._id !== id);
-                    const approving = reviews.find(odr => odr._id === id);
-                    approving.status = 'Approved'
-
-                    const newReviews = [approving, ...remaining];
-                    setReviews(newReviews);
-                }
-            })
-    }
-
     return (
         <div>
-             <Helmet>
-              <meta charSet="utf-8" />
-              <title>myReview</title>
-            </Helmet>
-            <h2 className="text-5xl">You have {reviews?.length} Review</h2>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>myReview</title>
+            </Helmet> 
+            <h2 className="text-5xl">You have {reviews.length} Review</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th>
-                            </th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Photo</th>
+                            <th>Services</th>
+                            <th >Review</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            reviews?.map(review => <ReviewRow
+                            reviews.map(review => <ReviewRow
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}
-                               
-                                handleStatusUpdate={handleStatusUpdate}
+
                             ></ReviewRow>)
-                        }
-                        
+                        }   
                     </tbody>
                 </table>
             </div>

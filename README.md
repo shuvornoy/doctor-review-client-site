@@ -1,3 +1,44 @@
+# Doctor Review
+[live Link](https://online-service-review.web.app)
+
+
+# Description
+Site Responsive, cart, nevbar, toastify, router, icons, blog section other....
+1. Online Doctor provides patients with a safe, convenient and discreet way to get prescriptions online. Find out how our service works and the conditions we treat. ... Visit IE Online Doctor Continue with UK service. Close. This service operates in the Republic of Ireland only.
+
+2.One such local online club is the new but already well-known online casino in the UK, Dr. Bet. DrBet offers a wide selection of slots, board games, live casinos, and more. The games available are from many reputable developers; therefore, there are many modern games here. In addition, there are many generous game incentives, ...
+
+3. Find Your Local Doctor. Find a NHS registered doctor near you with our comprehensive list of GP practices within the UK. You can find your local GP by city, aplhabetically or find a doctor near you now by entering your postcode above, and check all the information relating to a GP local to you including address, postcode, telephone, clinical services offered, prescriptions.
+
+4. Aspen University - Doctor of Education (Ed.D.) in Leadership and Learning. 1660 S. Albion St. Suite 525. Denver, CO, 80222. United States. Aspen University is a private institution located in Denver, CO. The Doctor of Education (Ed.D.) in Leadership and Learning program can be completed in 24-36 months.
+
+5. Find the lowest price for Online Mental Health Doctor today! Now on sale at GigaPromo. GigaPromo is the website to compare Online Mental Health Doctor. Search and save now! Large Selection. The Best Price. Always Sale. Cheap Prices. Save Online. Full Offer. Simple Search. Compare Simply. Services: Find your products, Lots of offers, Compare online, Free comparisons.
+
+# Best Repository
+
+An E-commerce platform for buying high quality  Home Appliances.
+
+# JWT Verify token add
+first time jwt token add best project.
+
+
+
+
+## React Router Dom v6.4 
+Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
+
+## Resources & Credits
+Bootstarp Components -> 
+[Bootstarp](https://react-bootstrap.github.io/)
+
+
+## Other Resources
+Icon -> [Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -6,66 +47,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# b6a11-service-review-client-side-shuvornoy" 

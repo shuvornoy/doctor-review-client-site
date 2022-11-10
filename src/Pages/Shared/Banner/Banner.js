@@ -1,8 +1,8 @@
 import React from 'react';
-import img1 from '../../../assets/images/banner/1.png';
-import img2 from '../../../assets/images/banner/2.png';
-import img3 from '../../../assets/images/banner/3.png';
-import img4 from '../../../assets/images/banner/4.png';
+import img1 from '../../../assets/images/banner/1.jpg';
+import img2 from '../../../assets/images/banner/2.jpg';
+import img3 from '../../../assets/images/banner/3.jpg';
+import img4 from '../../../assets/images/banner/4.jpg';
 import BannerItem from './BannerItem';
 
 const bannerData = [
