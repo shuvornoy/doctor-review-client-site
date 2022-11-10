@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
+import { Helmet } from 'react-helmet';
 
 
 const Review = () => {
@@ -72,6 +73,10 @@ const Review = () => {
 
     return (
         <div>
+             <Helmet>
+              <meta charSet="utf-8" />
+              <title>myReview</title>
+            </Helmet>
             <h2 className="text-5xl">You have {reviews?.length} Review</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">

@@ -1,5 +1,6 @@
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import {Helmet} from "react-helmet";
 
 const AddService = () => {
     const handlePlaceServices = event =>{
@@ -39,7 +40,12 @@ const AddService = () => {
 
     }
     return (
+      
         <div>
+             <Helmet>
+              <meta charSet="utf-8" />
+              <title>addServices</title>
+        </Helmet>
          <form onSubmit={handlePlaceServices} >
          <div className='grid grid-cols-1 lg:grid-cols-1 gap-10'>
          <label>
@@ -67,6 +73,7 @@ const AddService = () => {
             />
             </form>
         </div>
+        
     );
 };
 

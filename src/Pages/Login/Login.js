@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Socal from '../Shared/Socal/Socal';
+import { Helmet } from 'react-helmet';
 
 
 const Login = () => {
@@ -49,6 +50,11 @@ const Login = () => {
 }
     return (
         <div className='flex justify-center'>
+        <Helmet>
+              <meta charSet="utf-8" />
+              <title>login</title>
+        </Helmet>
+        
         <div className=" sm:w-1/2  my-20">
                 <div className=" md:grid-cols-1 card shadow-2xl bg-base-100 py-10">
                     <h1 className="text-5xl text-center font-bold">Login</h1>
