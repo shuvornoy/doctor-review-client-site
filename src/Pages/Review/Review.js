@@ -8,9 +8,12 @@ const Review = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
+        if(!user?.email){
+            return;
+        }
         fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                authorization: `Bearer ${localStorage.getItem('review-token')}`
             }
         })
             .then(res => {
@@ -30,7 +33,7 @@ const Review = () => {
             fetch(`http://localhost:5000/reviews/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                    authorization: `Bearer ${localStorage.getItem('review-token')}`
                 }
             })
                 .then(res => res.json())
@@ -69,7 +72,7 @@ const Review = () => {
 
     return (
         <div>
-            <h2 className="text-5xl">You have {reviews.length} Review</h2>
+            <h2 className="text-5xl">You have {reviews?.length} Review</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
@@ -84,7 +87,7 @@ const Review = () => {
                     </thead>
                     <tbody>
                         {
-                            reviews.map(review => <ReviewRow
+                            reviews?.map(review => <ReviewRow
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}

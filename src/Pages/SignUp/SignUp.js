@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser, logOut} = useContext(AuthContext);
     const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;
@@ -13,6 +13,7 @@ const SignUp = () => {
         
         createUser(email, password)
         .then(result => {
+            logOut()
             const user = result.user;
             console.log(user);
         })

@@ -20,10 +20,7 @@ const Header = () => {
         {
             user?.email ?
                 <>
-                    
-                    
-                   
-                   
+                 
                 </>
                 :
                 <Link to='/login'></Link>
