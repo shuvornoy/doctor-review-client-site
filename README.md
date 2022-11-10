@@ -28,9 +28,7 @@ first time jwt token add best project.
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
 ## Resources & Credits
-Bootstarp Components -> 
-[Bootstarp](https://react-bootstrap.github.io/)
-
+tailwind css
 
 ## Other Resources
 Icon -> [Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react)

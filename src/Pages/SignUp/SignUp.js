@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { Helmet } from 'react-helmet';
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignUp = () => {
     const {createUser, logOut} = useContext(AuthContext);
@@ -15,8 +16,10 @@ const SignUp = () => {
         
         createUser(email, password)
         .then(result => {
+            toast.success('Signup Successfully Pleas login')
             logOut()
             const user = result.user;
+            form.reset()
             console.log(user);
         })
         .catch(err => console.error(err));
@@ -56,6 +59,10 @@ const SignUp = () => {
                         </div>
                     </form>
                     <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
+                    <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                    />
                 </div>
         </div>
         </div>
