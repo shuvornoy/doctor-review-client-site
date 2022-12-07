@@ -3,14 +3,14 @@
 
 
 # Description
-Site Responsive, cart, nevbar, toastify, router, icons, blog section other....
-● Responsive Full Stack project with firebase authentication and user email login.
-● The present can buy any laptop provided, a project with a dynamic, and manage their
-services. There are user, seller, and admin dashboards.
-● Any person can buy a laptop and that person can pay with his visa card, master card,
-or any other card. By paying he can take the laptop.
-Technology: React Js, Node Js, (Express), Stripe, Firebase, MongoDB, Tailwind CSS, React
-hot Toast, Axios, Hook Form, JWT, React scripts, Vercel.
+● Responsive MERN Stack project with firebase authentication and user email login.
+● The present can buy any service, give a review with a dynamic rating, and manage
+their services.
+● Doctors can manage all present, make doctors, add all services, and manage any
+services.
+Technology: React Js, Node (Express), Firebase, MongoDB, TailwindCSS, React hot Toast,
+Axios, Hook Form.
+
 
 # Best Repository
 
