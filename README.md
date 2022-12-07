@@ -4,10 +4,13 @@
 
 # Description
 ● Responsive MERN Stack project with firebase authentication and user email login.
+
 ● The present can buy any service, give a review with a dynamic rating, and manage
 their services.
+
 ● Doctors can manage all present, make doctors, add all services, and manage any
 services.
+
 Technology: React Js, Node (Express), Firebase, MongoDB, TailwindCSS, React hot Toast,
 Axios, Hook Form.
 
